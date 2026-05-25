@@ -1,20 +1,14 @@
 # Geometry Calculator
 
-A simple CLI-based geometry calculator written in C++.
+A CLI-based geometry calculator written in C++ with a colored terminal interface.
 
 ## Description
 
 This project is a terminal-based geometry calculator developed in C++.
-It is currently under active development and will continue to receive updates over time.
 
-The goal of this project is to calculate various plane and solid geometry measurements such as:
+It uses a simple menu-driven system with colored text output to improve user experience in the terminal.
 
-- Area
-- Perimeter
-- Volume
-- Surface Area
-
-At the moment, the project supports circle area calculation as the first implemented feature.
+The program is currently in development and focuses on structured menu navigation for geometry selection.
 
 ## Getting Started
 
@@ -24,6 +18,7 @@ At the moment, the project supports circle area calculation as the first impleme
 - g++
 - MinGW
 - VS Code
+- Terminal that supports ANSI color codes
 
 ### Installing
 
@@ -42,16 +37,40 @@ g++ script.cpp -o geometry-calculator
 Run the program using:
 
 ```bash
-./geometry-calculator
+geometry-calculator
 ```
 
 ## Current Features
 
-- Plane Geometry Menu
-- Solid Geometry Menu
-- Circle Area Calculation
+- Colored CLI interface
+- Geometry type selection menu (Plane / Solid)
+- Plane shape selection menu
+- Solid shape selection menu
+- Input validation for invalid menu selection
+
+## Geometry Options
+
+### Plane Geometry
+- Square
+- Rectangle
+- Kite
+- Rhombus
+- Triangle
+- Circle
+- Parallelogram
+- Trapezoid
+
+### Solid Geometry
+- Cube
+- Cuboid
+- Square Pyramid
+- Triangular Prism
+- Triangular Pyramid
+- Cylinder
+- Cone
+- Sphere
 
 ## Project Status
 
 This project is currently under development.  
-More geometry shapes and calculations will be added gradually in future updates.
+More calculations (area, volume, etc.) will be added gradually in future updates.
