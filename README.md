@@ -4,8 +4,8 @@ A simple CLI-based geometry calculator written in C++.
 
 ## Description
 
-This project is a terminal-based geometry calculator developed using C++.  
-It is currently in development and will continue to receive gradual updates over time.
+This project is a terminal-based geometry calculator developed in C++.
+It is currently under active development and will continue to receive updates over time.
 
 The goal of this project is to calculate various plane and solid geometry measurements such as:
 
@@ -14,7 +14,7 @@ The goal of this project is to calculate various plane and solid geometry measur
 - Volume
 - Surface Area
 
-At the moment, the project currently supports circle area calculation.
+At the moment, the project supports circle area calculation as the first implemented feature.
 
 ## Getting Started
 
@@ -29,7 +29,7 @@ At the moment, the project currently supports circle area calculation.
 
 1. Clone or download this repository
 2. Open the project folder in VS Code
-3. Make sure MinGW and g++ are installed
+3. Make sure MinGW and g++ are installed properly
 
 ### Executing Program
 
@@ -54,4 +54,4 @@ Run the program using:
 ## Project Status
 
 This project is currently under development.  
-More geometry shapes and calculations will be added gradually over time.
+More geometry shapes and calculations will be added gradually in future updates.
