@@ -9,7 +9,10 @@ int main (){
     merah = "\033[31m";
 
     //Variabel
-    int geometry, shape_plane, shape_solid, calculation;
+    int geometry = 0;
+    int shape_plane = 0;
+    int shape_solid = 0;
+    int calculation = 0;
     double phi;
 
     //Geometry Menu
@@ -20,6 +23,12 @@ int main (){
     cout<<putih<<"➤ Select Geometry Type: ";
     cin>>geometry;
     system("cls");
+
+    if (geometry <=1 || geometry >=2 || cin.fail()){
+        cout<<"┌───────────────────────────────────┐"<<endl;
+        cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+        cout<<"└───────────────────────────────────┘";
+    }
 
     //Shape Menu
     if (geometry == 1){
@@ -41,11 +50,26 @@ int main (){
         cin>>shape_solid;
         system("cls");
     }
-
-    else {
+    
+    if (geometry == 1 && (shape_plane >= 8 || shape_plane <= 1 || cin.fail())){
         cout<<"┌───────────────────────────────────┐"<<endl;
         cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
         cout<<"└───────────────────────────────────┘";
     }
-    
+
+    else if (geometry == 2 && (shape_solid >= 8 || shape_solid <= 1 || cin.fail())){
+        cout<<"┌───────────────────────────────────┐"<<endl;
+        cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+        cout<<"└───────────────────────────────────┘";
+    }
+
+    //Rumus Plane Geometry
+    //Square
+    if (shape_plane == 1){
+        cout<<"┌────────────────────┐"<<endl;
+        cout<<"│       Square       │"<<endl;
+        cout<<"└────────────────────┘\n\n";
+        cout<<hijau<<"1. Area\n2. Perimeter\n";
+        cout<<"➤ Select a Calculation: ";
+    }
 }
