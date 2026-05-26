@@ -6,9 +6,11 @@ A CLI-based geometry calculator written in C++ with a colored terminal interface
 
 This project is a terminal-based geometry calculator developed in C++.
 
-It uses a simple menu-driven system with colored text output to improve user experience in the terminal.
+It uses a menu-driven system with colored terminal output to create a cleaner and more interactive CLI experience.
 
-The program is currently in development and focuses on structured menu navigation for geometry selection.
+The program includes geometry category selection, shape selection menus, input validation, and calculation flow navigation.
+
+This project is currently under development and will continue to receive new geometry formulas and features in future updates.
 
 ## Getting Started
 
@@ -43,14 +45,19 @@ geometry-calculator
 ## Current Features
 
 - Colored CLI interface
-- Geometry type selection menu (Plane / Solid)
-- Plane shape selection menu
-- Solid shape selection menu
-- Input validation for invalid menu selection
+- Geometry category selection menu
+- Plane geometry selection menu
+- Solid geometry selection menu
+- Input validation system
+- Invalid input detection using `cin.fail()`
+- Calculation selection flow
+- Square calculation menu
+- Structured CLI navigation system
 
 ## Geometry Options
 
 ### Plane Geometry
+
 - Square
 - Rectangle
 - Kite
@@ -61,6 +68,7 @@ geometry-calculator
 - Trapezoid
 
 ### Solid Geometry
+
 - Cube
 - Cuboid
 - Square Pyramid
@@ -72,5 +80,6 @@ geometry-calculator
 
 ## Project Status
 
-This project is currently under development.  
-More calculations (area, volume, etc.) will be added gradually in future updates.
+This project is currently under development.
+
+More geometry calculations such as area, perimeter, surface area, and volume will be added gradually in future updates.
