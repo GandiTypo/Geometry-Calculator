@@ -8,12 +8,12 @@ int main (){
     putih = "\033[0m";
     merah = "\033[31m";
 
-    //Variabel
+    //Variabel Menu
     int geometry = 0;
     int shape_plane = 0;
     int shape_solid = 0;
     int calculation = 0;
-    double phi;
+    double phi = 3.14;
 
     //Geometry Menu
     cout<<"┌───────────────────┐"<<endl;
@@ -24,10 +24,13 @@ int main (){
     cin>>geometry;
     system("cls");
 
-    if (geometry <=1 || geometry >=2 || cin.fail()){
+    if (geometry < 1 || geometry > 2 || cin.fail()){
         cout<<"┌───────────────────────────────────┐"<<endl;
         cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
         cout<<"└───────────────────────────────────┘";
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cin.get();
     }
 
     //Shape Menu
@@ -51,25 +54,79 @@ int main (){
         system("cls");
     }
     
-    if (geometry == 1 && (shape_plane >= 8 || shape_plane <= 1 || cin.fail())){
+    if (geometry == 1 && (shape_plane > 8 || shape_plane < 1 || cin.fail())){
         cout<<"┌───────────────────────────────────┐"<<endl;
         cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
         cout<<"└───────────────────────────────────┘";
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cin.get();
     }
 
-    else if (geometry == 2 && (shape_solid >= 8 || shape_solid <= 1 || cin.fail())){
+    else if (geometry == 2 && (shape_solid > 8 || shape_solid < 1 || cin.fail())){
         cout<<"┌───────────────────────────────────┐"<<endl;
         cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
         cout<<"└───────────────────────────────────┘";
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cin.get();
     }
 
     //Rumus Plane Geometry
-    //Square
+     //Varibel Plane Square
+    int square_calculation = 0;
+    double square_s;
+    
+     //Square
     if (shape_plane == 1){
         cout<<"┌────────────────────┐"<<endl;
         cout<<"│       Square       │"<<endl;
         cout<<"└────────────────────┘\n\n";
         cout<<hijau<<"1. Area\n2. Perimeter\n";
-        cout<<"➤ Select a Calculation: ";
+        cout<<putih<<"➤ Select a Calculation: ";
+        cin>>square_calculation;
+        system("cls");
+    }
+
+    if (shape_plane == 1 && (square_calculation < 1 || square_calculation > 2 || cin.fail())){
+        cout<<"┌───────────────────────────────────┐"<<endl;
+        cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+        cout<<"└───────────────────────────────────┘";
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cin.get();
+    }
+
+    else if (shape_plane == 2 && (square_calculation < 1 || square_calculation > 2 || cin.fail())){
+        cout<<"┌───────────────────────────────────┐"<<endl;
+        cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+        cout<<"└───────────────────────────────────┘";
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cin.get();
+    }
+
+    if (square_calculation == 1){
+        cout<<"\t\t┌────────────────────┐"<<endl;
+        cout<<"\t\t│        Area        │"<<endl;
+        cout<<"\t\t└────────────────────┘\n\n";
+        cout<<"➤ Enter the Side Length of the Square: ";
+        cin>>square_s;
+        system("cls");
+        cout<<"\t\t┌────────────────────┐"<<endl;
+        cout<<"\t\t│        Area        │"<<endl;
+        cout<<"\t\t└────────────────────┘\n\n";
+        cout<<"═══════Input═══════"<<endl;
+        cout<<"s = "<<square_s<<"\t"<<endl;
+        cout<<"══════Process══════"<<endl;
+        cout<<"L = s × s"<<endl;
+        cout<<"L = "<<square_s<<" × "<<square_s<<endl;
+        double L = square_s * square_s;
+        cout<<"L = "<<L<<endl<<endl;
+        cout<<"╔═════════════════════╗"<<endl;
+        cout<<"║       Results       ║"<<endl;
+        cout<<"║ L = "<<L<<"\t      ║"<<endl;
+        cout<<"╚═════════════════════╝"<<endl;
+        cin.get();
     }
 }
