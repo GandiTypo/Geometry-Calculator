@@ -1,8 +1,12 @@
 #include<iostream>
+#include<chrono>
+#include<thread>
 using namespace std;
+using namespace std::chrono;
+using namespace std::this_thread;
 
 int main (){
-    //Color
+    //Variabel Color
     string hijau, putih, merah;
     hijau = "\033[32m";
     putih = "\033[0m";
@@ -54,7 +58,7 @@ int main (){
         system("cls");
     }
     
-    if (geometry == 1 && (shape_plane > 8 || shape_plane < 1 || cin.fail())){
+    if ((geometry == 1 || geometry == 2) && (shape_plane > 8 || shape_plane < 1 || cin.fail())){
         cout<<"┌───────────────────────────────────┐"<<endl;
         cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
         cout<<"└───────────────────────────────────┘";
@@ -63,21 +67,12 @@ int main (){
         cin.get();
     }
 
-    else if (geometry == 2 && (shape_solid > 8 || shape_solid < 1 || cin.fail())){
-        cout<<"┌───────────────────────────────────┐"<<endl;
-        cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
-        cout<<"└───────────────────────────────────┘";
-        cin.clear();
-        cin.ignore(1000, '\n');
-        cin.get();
-    }
+    //calculation Plane Geometry
+     //Varibel Square
+     int square_calculation = 0;
+     double square_s;
 
-    //Rumus Plane Geometry
-     //Varibel Plane Square
-    int square_calculation = 0;
-    double square_s;
-    
-     //Square
+     //Square Menu
     if (shape_plane == 1){
         cout<<"┌────────────────────┐"<<endl;
         cout<<"│       Square       │"<<endl;
@@ -88,7 +83,7 @@ int main (){
         system("cls");
     }
 
-    if (shape_plane == 1 && (square_calculation < 1 || square_calculation > 2 || cin.fail())){
+    if ((shape_plane == 1 || shape_plane == 2)&& (square_calculation < 1 || square_calculation > 2 || cin.fail())){
         cout<<"┌───────────────────────────────────┐"<<endl;
         cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
         cout<<"└───────────────────────────────────┘";
@@ -96,16 +91,8 @@ int main (){
         cin.ignore(1000, '\n');
         cin.get();
     }
-
-    else if (shape_plane == 2 && (square_calculation < 1 || square_calculation > 2 || cin.fail())){
-        cout<<"┌───────────────────────────────────┐"<<endl;
-        cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
-        cout<<"└───────────────────────────────────┘";
-        cin.clear();
-        cin.ignore(1000, '\n');
-        cin.get();
-    }
-
+    
+     //Square Area
     if (square_calculation == 1){
         cout<<"\t\t┌────────────────────┐"<<endl;
         cout<<"\t\t│        Area        │"<<endl;
@@ -113,20 +100,130 @@ int main (){
         cout<<"➤ Enter the Side Length of the Square: ";
         cin>>square_s;
         system("cls");
+
+        if (cin.fail()){
+            cout<<"┌───────────────────────────────────┐"<<endl;
+            cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+            cout<<"└───────────────────────────────────┘";
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cin.get();
+            exit(0);
+        }
+
         cout<<"\t\t┌────────────────────┐"<<endl;
         cout<<"\t\t│        Area        │"<<endl;
         cout<<"\t\t└────────────────────┘\n\n";
         cout<<"═══════Input═══════"<<endl;
-        cout<<"s = "<<square_s<<"\t"<<endl;
+        cout<<"s = "<<square_s<<endl;
         cout<<"══════Process══════"<<endl;
-        cout<<"L = s × s"<<endl;
-        cout<<"L = "<<square_s<<" × "<<square_s<<endl;
-        double L = square_s * square_s;
-        cout<<"L = "<<L<<endl<<endl;
+        cout<<"[░░░░░░░░░░] 0%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[█░░░░░░░░░] 10%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[██░░░░░░░░] 20%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[███░░░░░░░] 30%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[████░░░░░░] 40%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[█████░░░░░] 50%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[██████░░░░] 60%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[███████░░░] 70%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[████████░░] 80%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[█████████░] 90%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[██████████] 100%";
+        sleep_for(milliseconds(500));
+        cout<<"\r                 \r";
+        cout<<"A = s × s"<<endl;
+        cout<<"A = "<<square_s<<" × "<<square_s<<endl;
+        cout<<"A = "<<square_s * square_s<<endl<<endl;
         cout<<"╔═════════════════════╗"<<endl;
         cout<<"║       Results       ║"<<endl;
-        cout<<"║ L = "<<L<<"\t      ║"<<endl;
+        cout<<"║ A = "<<square_s * square_s<<"\t      ║"<<endl;
         cout<<"╚═════════════════════╝"<<endl;
-        cin.get();
+        exit(0);
+    }
+
+     //Square Perimeter
+    if (square_calculation == 2){
+        cout<<"\t\t┌────────────────────┐"<<endl;
+        cout<<"\t\t│        Area        │"<<endl;
+        cout<<"\t\t└────────────────────┘\n\n";
+        cout<<"➤ Enter the Side Length of the Square: ";
+        cin>>square_s;
+        system("cls");
+
+        if (cin.fail()){
+            cout<<"┌───────────────────────────────────┐"<<endl;
+            cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+            cout<<"└───────────────────────────────────┘";
+            cin.clear();
+            cin.ignore(1000, 'n');
+            cin.get();
+        }
+
+        cout<<"\t\t┌─────────────────────┐"<<endl;
+        cout<<"\t\t│      Perimeter      │"<<endl;
+        cout<<"\t\t└─────────────────────┘\n\n";
+        cout<<"═══════Input═══════"<<endl;
+        cout<<"s = "<<square_s<<"\t\n"<<endl;
+        cout<<"══════Process══════"<<endl;
+        cout<<"[░░░░░░░░░░] 0%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[█░░░░░░░░░] 10%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[██░░░░░░░░] 20%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[███░░░░░░░] 30%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[████░░░░░░] 40%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[█████░░░░░] 50%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[██████░░░░] 60%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[███████░░░] 70%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[████████░░] 80%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[█████████░] 90%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[██████████] 100%";
+        sleep_for(milliseconds(500));
+        cout<<"\r                 \r";
+        cout<<"P = 4 × s"<<endl;
+        cout<<"P = 4 × "<<square_s<<endl;
+        cout<<"P = "<<4 * square_s<<endl;
+        cout<<"╔═════════════════════╗"<<endl;
+        cout<<"║       Results       ║"<<endl;
+        cout<<"║ P = "<<4 * square_s<<"\t      ║"<<endl;
+        cout<<"╚═════════════════════╝"<<endl;
+        exit(0);
     }
 }
