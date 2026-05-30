@@ -243,7 +243,7 @@ int main (){
         system("cls");
     }
 
-    if ((rectangle_calculation = 1 || rectangle_calculation == 2) && (rectangle_calculation <1 || rectangle_calculation >2 || cin.fail())){
+    if ((rectangle_calculation == 1 || rectangle_calculation == 2) && (rectangle_calculation <1 || rectangle_calculation >2 || cin.fail())){
         cout<<"┌───────────────────────────────────┐"<<endl;
         cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
         cout<<"└───────────────────────────────────┘";
@@ -285,7 +285,8 @@ int main (){
             cin.get();
             exit(0);
         }
-        
+
+        system("cls");
         cout<<"\t\t┌────────────────────┐"<<endl;
         cout<<"\t\t│        Area        │"<<endl;
         cout<<"\t\t└────────────────────┘\n\n";
@@ -331,6 +332,91 @@ int main (){
         cout<<"╔═════════════════════╗"<<endl;
         cout<<"║       Results       ║"<<endl;
         cout<<"║ A = "<<rectangle_l * rectangle_w<<"\t      ║"<<endl;
+        cout<<"╚═════════════════════╝"<<endl;
+        exit(0);
+    }
+
+     //Rectangle Perimeter
+    if (rectangle_calculation == 2){
+        cout<<"\t\t┌─────────────────────┐"<<endl;
+        cout<<"\t\t│      Perimeter      │"<<endl;
+        cout<<"\t\t└─────────────────────┘\n\n";
+        cout<<"➤ Enter the Side Length of the Rectangle: ";
+        cin>>rectangle_l;
+        
+        if (cin.fail()){
+            system("cls");
+            cout<<"┌───────────────────────────────────┐"<<endl;
+            cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+            cout<<"└───────────────────────────────────┘";
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cin.get();
+            exit(0);
+        }
+
+        cout<<"➤ Enter the Side Width of the Rectangle: ";
+        cin>>rectangle_w;
+
+        if (cin.fail()){
+            system("cls");
+            cout<<"┌───────────────────────────────────┐"<<endl;
+            cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+            cout<<"└───────────────────────────────────┘";
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cin.get();
+            exit(0);
+        }
+
+        system("cls");
+        cout<<"\t\t┌─────────────────────┐"<<endl;
+        cout<<"\t\t│      Perimeter      │"<<endl;
+        cout<<"\t\t└─────────────────────┘\n\n";
+        cout<<"═══════Input═══════"<<endl;
+        cout<<" l = "<<rectangle_l<<"\n w = "<<rectangle_w<<"\n"<<endl;
+        cout<<"══════Process══════"<<endl;
+        cout<<"[░░░░░░░░░░] 0%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[█░░░░░░░░░] 10%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[██░░░░░░░░] 20%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[███░░░░░░░] 30%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[████░░░░░░] 40%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[█████░░░░░] 50%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[██████░░░░] 60%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[███████░░░] 70%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[████████░░] 80%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[█████████░] 90%";
+        sleep_for(milliseconds(500));
+        cout<<"\r";
+        cout<<"[██████████] 100%";
+        sleep_for(milliseconds(500));
+        cout<<"\r                 \r";
+        cout<<"P = 2 (l + w)"<<endl;
+        cout<<"P = 2 ("<<rectangle_l<<" + "<<rectangle_w<<")"<<endl;
+        cout<<"P = 2 ("<<rectangle_l + rectangle_w<<")"<<endl;
+        cout<<"P = 2 × "<<rectangle_l + rectangle_w<<endl;
+        cout<<"P = "<<2 * (rectangle_l + rectangle_w)<<endl<<endl;
+        cout<<"╔═════════════════════╗"<<endl;
+        cout<<"║       Results       ║"<<endl;
+        cout<<"║ P = "<<2 * (rectangle_l + rectangle_w)<<"\t      ║"<<endl;
         cout<<"╚═════════════════════╝"<<endl;
         exit(0);
     }
