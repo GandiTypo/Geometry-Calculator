@@ -16,7 +16,6 @@ int main (){
     int geometry = 0;
     int shape_plane = 0;
     int shape_solid = 0;
-    int calculation = 0;
     double phi = 3.14;
 
     //Geometry Menu
@@ -28,13 +27,14 @@ int main (){
     cin>>geometry;
     system("cls");
 
-    if (geometry < 1 || geometry > 2 || cin.fail()){
+    if ((!(geometry == 1 || geometry == 2)) || (cin.fail())){
         cout<<"┌───────────────────────────────────┐"<<endl;
         cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
         cout<<"└───────────────────────────────────┘";
         cin.clear();
         cin.ignore(1000, '\n');
         cin.get();
+        exit(0);
     }
 
     //Shape Menu
@@ -58,13 +58,24 @@ int main (){
         system("cls");
     }
     
-    if ((geometry == 1 || geometry == 2) && (shape_plane > 8 || shape_plane < 1 || cin.fail())){
+    if (geometry == 1 && (shape_plane < 1 || shape_plane > 8 || cin.fail())){
         cout<<"┌───────────────────────────────────┐"<<endl;
         cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
         cout<<"└───────────────────────────────────┘";
         cin.clear();
         cin.ignore(1000, '\n');
         cin.get();
+        exit(0);
+    }
+
+    else if (geometry == 2 && (shape_solid < 1 || shape_solid > 8 || cin.fail())){
+        cout<<"┌───────────────────────────────────┐"<<endl;
+        cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+        cout<<"└───────────────────────────────────┘";
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cin.get();
+        exit(0);
     }
 
     //calculation Plane Geometry
@@ -90,6 +101,7 @@ int main (){
         cin.clear();
         cin.ignore(1000, '\n');
         cin.get();
+        exit(0);
     }
     
      //Square Area
@@ -243,7 +255,7 @@ int main (){
         system("cls");
     }
 
-    if ((rectangle_calculation == 1 || rectangle_calculation == 2) && (rectangle_calculation <1 || rectangle_calculation >2 || cin.fail())){
+    if (shape_plane == 2 && (rectangle_calculation < 1 || rectangle_calculation > 2 || cin.fail())){
         cout<<"┌───────────────────────────────────┐"<<endl;
         cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
         cout<<"└───────────────────────────────────┘";
