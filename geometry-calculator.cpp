@@ -79,6 +79,7 @@ int main (){
     }
 
     //calculation Plane Geometry
+
      //Varibel Square
      int square_calculation = 0;
      double square_s;
@@ -431,5 +432,102 @@ int main (){
         cout<<"║ P = "<<2 * (rectangle_l + rectangle_w)<<"\t      ║"<<endl;
         cout<<"╚═════════════════════╝"<<endl;
         exit(0);
+    }
+     //Variabel Kite
+     int kite_calculation = 0;
+     double kite_d1, kite_d2;
+
+     //Kite Menu
+    if (shape_plane == 3){
+        cout<<"┌────────────────────┐"<<endl;
+        cout<<"│        Kite        │"<<endl;
+        cout<<"└────────────────────┘\n\n";
+        cout<<hijau<<"1. Area\n2. Perimeter\n";
+        cout<<putih<<"➤ Select a Calculation: ";
+        cin>>kite_calculation;
+        system("cls");
+
+        if (shape_plane == 3 && (kite_calculation > 2 || kite_calculation < 1 || cin.fail())){
+            system("cls");
+            cout<<"┌───────────────────────────────────┐"<<endl;
+            cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+            cout<<"└───────────────────────────────────┘";
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cin.get();
+            exit(0);
+        }
+
+        if (kite_calculation == 1){
+            cout<<"\t\t┌────────────────────┐"<<endl;
+            cout<<"\t\t│        Area        │"<<endl;
+            cout<<"\t\t└────────────────────┘\n\n";
+            cout<<"➤ Enter the Length of Diagonal 1: ";
+            cin>>kite_d1;
+            
+            if (kite_calculation == 1 && (cin.fail())){
+                system("cls");
+                cout<<"┌───────────────────────────────────┐"<<endl;
+                cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+                cout<<"└───────────────────────────────────┘";
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cin.get();
+                exit(0);
+            }
+
+            cout<<"➤ Enter the Length of Diagonal 2: ";
+            cin>>kite_d2;
+            system("cls");
+            cout<<"\t\t┌────────────────────┐"<<endl;
+            cout<<"\t\t│        Area        │"<<endl;
+            cout<<"\t\t└────────────────────┘\n\n";
+            cout<<"═══════Input═══════"<<endl;
+            cout<<"d1 = "<<kite_d1<<endl;
+            cout<<"d2 = "<<kite_d2<<endl<<endl;
+            cout<<"══════Process══════"<<endl;
+            cout<<"[░░░░░░░░░░] 0%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[█░░░░░░░░░] 10%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[██░░░░░░░░] 20%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[███░░░░░░░] 30%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[████░░░░░░] 40%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[█████░░░░░] 50%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[██████░░░░] 60%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[███████░░░] 70%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[████████░░] 80%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[█████████░] 90%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[██████████] 100%";
+            sleep_for(milliseconds(500));
+            cout<<"\r                 \r";
+            cout<<"A = (d1 × d2) / 2"<<endl;
+            cout<<"A = ("<<kite_d1<<" × "<<kite_d2<<") / 2"<<endl;
+            cout<<"A = "<<kite_d1 * kite_d2<<" / 2"<<endl;
+            cout<<"A = "<<(kite_d1 * kite_d2) / 2<<endl<<endl;
+            cout<<"╔═════════════════════╗"<<endl;
+            cout<<"║       Results       ║"<<endl;
+            cout<<"║ A = "<<(kite_d1 * kite_d2) / 2<<"\t      ║"<<endl;
+            cout<<"╚═════════════════════╝"<<endl;
+            exit(0);
+        }
     }
 }
