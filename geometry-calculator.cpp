@@ -128,7 +128,7 @@ int main (){
         cout<<"\t\t│        Area        │"<<endl;
         cout<<"\t\t└────────────────────┘\n\n";
         cout<<"═══════Input═══════"<<endl;
-        cout<<"s = "<<square_s<<"\n"<<endl;
+        cout<<" s = "<<square_s<<"\n"<<endl;
         cout<<"══════Process══════"<<endl;
         cout<<"[░░░░░░░░░░] 0%";
         sleep_for(milliseconds(500));
@@ -196,7 +196,7 @@ int main (){
         cout<<"\t\t│      Perimeter      │"<<endl;
         cout<<"\t\t└─────────────────────┘\n\n";
         cout<<"═══════Input═══════"<<endl;
-        cout<<"s = "<<square_s<<"\n"<<endl;
+        cout<<" s = "<<square_s<<"\n"<<endl;
         cout<<"══════Process══════"<<endl;
         cout<<"[░░░░░░░░░░] 0%";
         sleep_for(milliseconds(500));
@@ -436,6 +436,7 @@ int main (){
      //Variabel Kite
      int kite_calculation = 0;
      double kite_d1, kite_d2;
+     double kite_a, kite_b;
 
      //Kite Menu
     if (shape_plane == 3){
@@ -465,7 +466,7 @@ int main (){
             cout<<"➤ Enter the Length of Diagonal 1: ";
             cin>>kite_d1;
             
-            if (kite_calculation == 1 && (cin.fail())){
+            if (kite_calculation == 1 && cin.fail()){
                 system("cls");
                 cout<<"┌───────────────────────────────────┐"<<endl;
                 cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
@@ -478,13 +479,25 @@ int main (){
 
             cout<<"➤ Enter the Length of Diagonal 2: ";
             cin>>kite_d2;
+
+            if (kite_calculation == 1 && cin.fail()){
+                system("cls");
+                cout<<"┌───────────────────────────────────┐"<<endl;
+                cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+                cout<<"└───────────────────────────────────┘";
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cin.get();
+                exit(0);
+            }
+
             system("cls");
             cout<<"\t\t┌────────────────────┐"<<endl;
             cout<<"\t\t│        Area        │"<<endl;
             cout<<"\t\t└────────────────────┘\n\n";
             cout<<"═══════Input═══════"<<endl;
-            cout<<"d1 = "<<kite_d1<<endl;
-            cout<<"d2 = "<<kite_d2<<endl<<endl;
+            cout<<" d1 = "<<kite_d1<<endl;
+            cout<<" d2 = "<<kite_d2<<endl<<endl;
             cout<<"══════Process══════"<<endl;
             cout<<"[░░░░░░░░░░] 0%";
             sleep_for(milliseconds(500));
@@ -526,6 +539,90 @@ int main (){
             cout<<"╔═════════════════════╗"<<endl;
             cout<<"║       Results       ║"<<endl;
             cout<<"║ A = "<<(kite_d1 * kite_d2) / 2<<"\t      ║"<<endl;
+            cout<<"╚═════════════════════╝"<<endl;
+            exit(0);
+        }
+
+        if (kite_calculation == 2){
+            cout<<"\t\t┌─────────────────────┐"<<endl;
+            cout<<"\t\t│      Perimeter      │"<<endl;
+            cout<<"\t\t└─────────────────────┘\n\n";
+            cout<<"➤ Enter the Length of Side a: ";
+            cin>>kite_a;
+
+            if (kite_calculation == 2 && cin.fail()){
+                system("cls");
+                cout<<"┌───────────────────────────────────┐"<<endl;
+                cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+                cout<<"└───────────────────────────────────┘";
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cin.get();
+                exit(0);
+            }
+
+            cout<<"➤ Enter the Length of Side b: ";
+            cin>>kite_b;
+
+            if (kite_calculation == 2 && cin.fail()){
+                system("cls");
+                cout<<"┌───────────────────────────────────┐"<<endl;
+                cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+                cout<<"└───────────────────────────────────┘";
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cin.get();
+                exit(0);
+            }
+
+            system("cls");
+            cout<<"\t\t┌─────────────────────┐"<<endl;
+            cout<<"\t\t│      Perimeter      │"<<endl;
+            cout<<"\t\t└─────────────────────┘\n\n";
+            cout<<"═══════Input═══════"<<endl;
+            cout<<" a = "<<kite_a<<endl;
+            cout<<" b = "<<kite_b<<endl;
+            cout<<"══════Process══════"<<endl;
+            cout<<"[░░░░░░░░░░] 0%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[█░░░░░░░░░] 10%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[██░░░░░░░░] 20%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[███░░░░░░░] 30%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[████░░░░░░] 40%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[█████░░░░░] 50%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[██████░░░░] 60%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[███████░░░] 70%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[████████░░] 80%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[█████████░] 90%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[██████████] 100%";
+            sleep_for(milliseconds(500));
+            cout<<"\r                 \r";
+            cout<<"P = 2 (a + b)"<<endl;
+            cout<<"P = 2 ("<<kite_a<<" + "<<kite_b<<endl;
+            cout<<"P = 2 × "<<kite_a + kite_b<<endl;
+            cout<<"P = "<<2 * (kite_a + kite_b)<<endl<<endl;
+            cout<<"╔═════════════════════╗"<<endl;
+            cout<<"║       Results       ║"<<endl;
+            cout<<"║ P = "<<2 * (kite_a + kite_b)<<"\t      ║"<<endl;
             cout<<"╚═════════════════════╝"<<endl;
             exit(0);
         }
