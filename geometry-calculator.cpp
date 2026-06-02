@@ -114,7 +114,7 @@ int main (){
         cin>>square_s;
         system("cls");
 
-        if (cin.fail()){
+        if (square_calculation == 1 && (cin.fail())){
             cout<<"┌───────────────────────────────────┐"<<endl;
             cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
             cout<<"└───────────────────────────────────┘";
@@ -182,7 +182,7 @@ int main (){
         cin>>square_s;
         system("cls");
 
-        if (cin.fail()){
+        if (square_calculation == 2 && (cin.fail())){
             cout<<"┌───────────────────────────────────┐"<<endl;
             cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
             cout<<"└───────────────────────────────────┘";
@@ -242,8 +242,8 @@ int main (){
     }
 
      //Variabel Rectangle
-        int rectangle_calculation = 0;
-        double rectangle_l, rectangle_w;
+     int rectangle_calculation = 0;
+     double rectangle_l, rectangle_w;
 
      //Rectangle Menu
     if (shape_plane == 2){
@@ -274,7 +274,7 @@ int main (){
         cout<<"➤ Enter the Side Length of the Rectangle: ";
         cin>>rectangle_l;
 
-        if (cin.fail()){
+        if (rectangle_calculation == 1 && (cin.fail())){
             system("cls");
             cout<<"┌───────────────────────────────────┐"<<endl;
             cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
@@ -288,7 +288,7 @@ int main (){
         cout<<"➤ Enter the Side Width of the Rectangle: ";
         cin>>rectangle_w;
 
-        if (cin.fail()){
+        if (rectangle_calculation == 1 && (cin.fail())){
             system("cls");
             cout<<"┌───────────────────────────────────┐"<<endl;
             cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
@@ -357,7 +357,7 @@ int main (){
         cout<<"➤ Enter the Side Length of the Rectangle: ";
         cin>>rectangle_l;
         
-        if (cin.fail()){
+        if (rectangle_calculation == 2 && (cin.fail())){
             system("cls");
             cout<<"┌───────────────────────────────────┐"<<endl;
             cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
@@ -371,7 +371,7 @@ int main (){
         cout<<"➤ Enter the Side Width of the Rectangle: ";
         cin>>rectangle_w;
 
-        if (cin.fail()){
+        if (rectangle_calculation == 2 && (cin.fail())){
             system("cls");
             cout<<"┌───────────────────────────────────┐"<<endl;
             cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
@@ -623,6 +623,117 @@ int main (){
             cout<<"╔═════════════════════╗"<<endl;
             cout<<"║       Results       ║"<<endl;
             cout<<"║ P = "<<2 * (kite_a + kite_b)<<"\t      ║"<<endl;
+            cout<<"╚═════════════════════╝"<<endl;
+            exit(0);
+        }
+    }
+
+     //Rhombus Variabel
+     int rhombus_calculation = 0;
+     double rhombus_d1, rhombus_d2;
+
+     //Rhombus Menu
+    if (shape_plane == 4){
+        cout<<"┌─────────────────────┐"<<endl;
+        cout<<"│       Rhombus       │"<<endl;
+        cout<<"└─────────────────────┘\n\n";
+        cout<<hijau<<"1. Area\n2. Perimeter\n";
+        cout<<putih<<"➤ Select a Calculation: ";
+        cin>>rhombus_calculation;
+        system("cls");
+
+        if (shape_plane == 4 && (rhombus_calculation < 1 || rhombus_calculation > 2 || cin.fail())){
+            system("cls");
+            cout<<"┌───────────────────────────────────┐"<<endl;
+            cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+            cout<<"└───────────────────────────────────┘";
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cin.get();
+            exit(0);
+        }
+
+         //Rhombus Area
+        if (rhombus_calculation == 1){
+            cout<<"\t\t┌────────────────────┐"<<endl;
+            cout<<"\t\t│        Area        │"<<endl;
+            cout<<"\t\t└────────────────────┘\n\n";
+            cout<<"➤ Enter the Length of Diagonal 1: ";
+            cin>>rhombus_d1;
+            
+            if (rhombus_calculation == 1 && cin.fail()){
+                system("cls");
+                cout<<"┌───────────────────────────────────┐"<<endl;
+                cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+                cout<<"└───────────────────────────────────┘";
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cin.get();
+                exit(0);
+            }
+
+            cout<<"➤ Enter the Length of Diagonal 2: ";
+            cin>>rhombus_d2;
+
+            if (rhombus_calculation == 1 && cin.fail()){
+                system("cls");
+                cout<<"┌───────────────────────────────────┐"<<endl;
+                cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+                cout<<"└───────────────────────────────────┘";
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cin.get();
+                exit(0);
+            }
+
+            system("cls");
+            cout<<"\t\t┌────────────────────┐"<<endl;
+            cout<<"\t\t│        Area        │"<<endl;
+            cout<<"\t\t└────────────────────┘\n\n";
+            cout<<"═══════Input═══════"<<endl;
+            cout<<" d1 = "<<rhombus_d1<<endl;
+            cout<<" d2 = "<<rhombus_d2<<endl;
+            cout<<"══════Process══════"<<endl;
+            cout<<"[░░░░░░░░░░] 0%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[█░░░░░░░░░] 10%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[██░░░░░░░░] 20%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[███░░░░░░░] 30%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[████░░░░░░] 40%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[█████░░░░░] 50%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[██████░░░░] 60%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[███████░░░] 70%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[████████░░] 80%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[█████████░] 90%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[██████████] 100%";
+            sleep_for(milliseconds(500));
+            cout<<"\r                 \r";
+            cout<<"A = (d1 × d2) / 2"<<endl;
+            cout<<"A = ("<<rhombus_d1<<" × "<<rhombus_d2<<") / 2"<<endl;
+            cout<<"A = "<<rhombus_d1 * rhombus_d2<<" / 2"<<endl;
+            cout<<"A = "<<(rhombus_d1 * rhombus_d2) / 2<<endl<<endl;
+            cout<<"╔═════════════════════╗"<<endl;
+            cout<<"║       Results       ║"<<endl;
+            cout<<"║ A = "<<(rhombus_d1 * rhombus_d2) / 2<<"\t      ║"<<endl;
             cout<<"╚═════════════════════╝"<<endl;
             exit(0);
         }
