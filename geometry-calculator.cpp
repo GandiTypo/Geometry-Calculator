@@ -449,7 +449,6 @@ int main (){
         system("cls");
 
         if (shape_plane == 3 && (kite_calculation > 2 || kite_calculation < 1 || cin.fail())){
-            system("cls");
             cout<<"┌───────────────────────────────────┐"<<endl;
             cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
             cout<<"└───────────────────────────────────┘";
@@ -630,7 +629,7 @@ int main (){
 
      //Rhombus Variabel
      int rhombus_calculation = 0;
-     double rhombus_d1, rhombus_d2;
+     double rhombus_d1, rhombus_d2, rhombus_s;
 
      //Rhombus Menu
     if (shape_plane == 4){
@@ -643,7 +642,6 @@ int main (){
         system("cls");
 
         if (shape_plane == 4 && (rhombus_calculation < 1 || rhombus_calculation > 2 || cin.fail())){
-            system("cls");
             cout<<"┌───────────────────────────────────┐"<<endl;
             cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
             cout<<"└───────────────────────────────────┘";
@@ -734,6 +732,75 @@ int main (){
             cout<<"╔═════════════════════╗"<<endl;
             cout<<"║       Results       ║"<<endl;
             cout<<"║ A = "<<(rhombus_d1 * rhombus_d2) / 2<<"\t      ║"<<endl;
+            cout<<"╚═════════════════════╝"<<endl;
+            exit(0);
+        }
+
+         //Rhombus Area
+        if (rhombus_calculation == 2){
+            cout<<"\t\t┌─────────────────────┐"<<endl;
+            cout<<"\t\t│      Perimeter      │"<<endl;
+            cout<<"\t\t└─────────────────────┘\n\n";
+            cout<<"➤ Enter the Side Length of the Rhombus: ";
+            cin>>rhombus_s;
+
+            if (rhombus_calculation == 2 && cin.fail()){
+                system("cls");
+                cout<<"┌───────────────────────────────────┐"<<endl;
+                cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+                cout<<"└───────────────────────────────────┘";
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cin.get();
+                exit(0);
+            }
+
+            system("cls");
+            cout<<"\t\t┌─────────────────────┐"<<endl;
+            cout<<"\t\t│      Perimeter      │"<<endl;
+            cout<<"\t\t└─────────────────────┘\n\n";
+            cout<<"═══════Input═══════"<<endl;
+            cout<<" s = "<<rhombus_s<<endl<<endl;
+            cout<<"══════Process══════"<<endl;
+            cout<<"[░░░░░░░░░░] 0%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[█░░░░░░░░░] 10%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[██░░░░░░░░] 20%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[███░░░░░░░] 30%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[████░░░░░░] 40%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[█████░░░░░] 50%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[██████░░░░] 60%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[███████░░░] 70%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[████████░░] 80%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[█████████░] 90%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[██████████] 100%";
+            sleep_for(milliseconds(500));
+            cout<<"\r                 \r";
+            cout<<"P = 4s"<<endl;
+            cout<<"P = 4 × "<<rhombus_s<<endl;
+            cout<<"P = "<<4 * rhombus_s<<endl<<endl;
+            cout<<"╔═════════════════════╗"<<endl;
+            cout<<"║       Results       ║"<<endl;
+            cout<<"║ P = "<<4 * rhombus_s<<"\t      ║"<<endl;
             cout<<"╚═════════════════════╝"<<endl;
             exit(0);
         }
