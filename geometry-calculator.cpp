@@ -805,4 +805,114 @@ int main (){
             exit(0);
         }
     }
+
+     //Triangle Variabel
+     int triangle_calculation = 0;
+     double triangle_b, triangle_h;
+
+     //Triangle Menu
+    if (shape_plane == 5){
+        cout<<"┌──────────────────────┐"<<endl;
+        cout<<"│       Triangle       │"<<endl;
+        cout<<"└──────────────────────┘\n\n";
+        cout<<hijau<<"1. Area\n2. Perimeter\n";
+        cout<<putih<<"➤ Select a Calculation: ";
+        cin>>triangle_calculation;
+        system("cls");
+
+        if (shape_plane == 5 && (triangle_calculation < 1 || triangle_calculation > 2 || cin.fail())){
+            cout<<"┌───────────────────────────────────┐"<<endl;
+            cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+            cout<<"└───────────────────────────────────┘";
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cin.get();
+            exit(0);
+        }
+
+         //Triangle Area
+        if (triangle_calculation == 1){
+            cout<<"\t\t┌────────────────────┐"<<endl;
+            cout<<"\t\t│        Area        │"<<endl;
+            cout<<"\t\t└────────────────────┘\n\n";
+            cout<<"➤ Enter the Length of the Base: ";
+            cin>>triangle_b;
+            
+            if (kite_calculation == 1 && cin.fail()){
+                system("cls");
+                cout<<"┌───────────────────────────────────┐"<<endl;
+                cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+                cout<<"└───────────────────────────────────┘";
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cin.get();
+                exit(0);
+            }
+
+            cout<<"➤ Enter the Height of the Triangle: ";
+            cin>>triangle_h;
+
+            if (kite_calculation == 1 && cin.fail()){
+                system("cls");
+                cout<<"┌───────────────────────────────────┐"<<endl;
+                cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+                cout<<"└───────────────────────────────────┘";
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cin.get();
+                exit(0);
+            }
+
+            system("cls");
+            cout<<"\t\t┌────────────────────┐"<<endl;
+            cout<<"\t\t│        Area        │"<<endl;
+            cout<<"\t\t└────────────────────┘\n\n";
+            cout<<"═══════Input═══════"<<endl;
+            cout<<" b = "<<triangle_b<<endl;
+            cout<<" h = "<<triangle_h<<endl;
+            cout<<"══════Process══════"<<endl;
+            cout<<"[░░░░░░░░░░] 0%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[█░░░░░░░░░] 10%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[██░░░░░░░░] 20%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[███░░░░░░░] 30%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[████░░░░░░] 40%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[█████░░░░░] 50%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[██████░░░░] 60%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[███████░░░] 70%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[████████░░] 80%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[█████████░] 90%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[██████████] 100%";
+            sleep_for(milliseconds(500));
+            cout<<"\r                 \r";
+            cout<<"A = (b × h) / 2"<<endl;
+            cout<<"A = ("<<triangle_b<<" × "<<triangle_h<<") / 2"<<endl;
+            cout<<"A = "<<triangle_b * triangle_h<<" / 2"<<endl;
+            cout<<"A = "<<(triangle_b * triangle_h) / 2<<endl<<endl;
+            cout<<"╔═════════════════════╗"<<endl;
+            cout<<"║       Results       ║"<<endl;
+            cout<<"║ A = "<<(triangle_b * triangle_h) / 2<<"\t      ║"<<endl;
+            cout<<"╚═════════════════════╝"<<endl;
+            exit(0);
+        }
+    }
 }
