@@ -808,7 +808,7 @@ int main (){
 
      //Triangle Variabel
      int triangle_calculation = 0;
-     double triangle_b, triangle_h;
+     double triangle_a, triangle_b, triangle_c, triangle_h;
 
      //Triangle Menu
     if (shape_plane == 5){
@@ -911,6 +911,105 @@ int main (){
             cout<<"╔═════════════════════╗"<<endl;
             cout<<"║       Results       ║"<<endl;
             cout<<"║ A = "<<(triangle_b * triangle_h) / 2<<"\t      ║"<<endl;
+            cout<<"╚═════════════════════╝"<<endl;
+            exit(0);
+        }
+
+         //Triangle Perimeter
+        if (triangle_calculation == 2){
+            cout<<"\t\t┌─────────────────────┐"<<endl;
+            cout<<"\t\t│      Perimeter      │"<<endl;
+            cout<<"\t\t└─────────────────────┘\n\n";
+            cout<<"➤ Enter the length of side A: ";
+            cin>>triangle_a;
+
+            if (triangle_calculation == 2 && cin.fail()){
+                system("cls");
+                cout<<"┌───────────────────────────────────┐"<<endl;
+                cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+                cout<<"└───────────────────────────────────┘";
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cin.get();
+                exit(0);
+            }
+
+            cout<<"➤ Enter the length of side B: ";
+            cin>>triangle_b;
+
+            if (triangle_calculation == 2 && cin.fail()){
+                system("cls");
+                cout<<"┌───────────────────────────────────┐"<<endl;
+                cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+                cout<<"└───────────────────────────────────┘";
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cin.get();
+                exit(0);
+            }
+
+            cout<<"➤ Enter the length of side C: ";
+            cin>>triangle_c;
+
+            if (triangle_calculation == 2 && cin.fail()){
+                system("cls");
+                cout<<"┌───────────────────────────────────┐"<<endl;
+                cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+                cout<<"└───────────────────────────────────┘";
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cin.get();
+                exit(0);
+            }
+
+            system("cls");
+            cout<<"\t\t┌─────────────────────┐"<<endl;
+            cout<<"\t\t│      Perimeter      │"<<endl;
+            cout<<"\t\t└─────────────────────┘\n\n";
+            cout<<"═══════Input═══════"<<endl;
+            cout<<" a = "<<triangle_a<<endl;
+            cout<<" b = "<<triangle_b<<endl;
+            cout<<" c = "<<triangle_c<<endl<<endl;
+            cout<<"══════Process══════"<<endl;
+            cout<<"[░░░░░░░░░░] 0%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[█░░░░░░░░░] 10%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[██░░░░░░░░] 20%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[███░░░░░░░] 30%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[████░░░░░░] 40%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[█████░░░░░] 50%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[██████░░░░] 60%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[███████░░░] 70%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[████████░░] 80%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[█████████░] 90%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[██████████] 100%";
+            sleep_for(milliseconds(500));
+            cout<<"\r                 \r";
+            cout<<"P = a + b + c"<<endl;
+            cout<<"P = "<<triangle_a<<" + "<<triangle_b<<" + "<<triangle_c<<endl;
+            cout<<"P = "<<triangle_a + triangle_b + triangle_c<<endl<<endl;
+            cout<<"╔═════════════════════╗"<<endl;
+            cout<<"║       Results       ║"<<endl;
+            cout<<"║ P = "<<triangle_a + triangle_b + triangle_c<<"\t      ║"<<endl;
             cout<<"╚═════════════════════╝"<<endl;
             exit(0);
         }
