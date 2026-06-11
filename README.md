@@ -1,85 +1,85 @@
-# Geometry Calculator
+<h1 align="center">🧮 Geometry Calculator</h1>
 
-A CLI-based geometry calculator written in C++ with a colored terminal interface.
+<p align="center">
+  <em>A terminal-based geometry calculator written in C++ with an interactive, colored CLI.</em>
+</p>
 
-## Description
+<p align="center">
+  <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white" alt="C++" />
+  <img src="https://img.shields.io/badge/Platform-Windows-0078D6?style=flat-square&logo=windows&logoColor=white" alt="Windows" />
+  <img src="https://img.shields.io/badge/Status-Under_Development-FFD700?style=flat-square" alt="Status" />
+</p>
 
-This project is a terminal-based geometry calculator developed in C++.
+---
 
-It uses a menu-driven system with colored terminal output to create a cleaner and more interactive CLI experience.
+## 📖 About The Project
 
-The program includes geometry category selection, shape selection menus, input validation, and calculation flow navigation.
+This project is a command-line interface (CLI) geometry calculator developed in C++. It replaces standard text outputs with a menu-driven system utilizing ANSI color codes, creating a cleaner and highly interactive user experience right in your terminal.
 
-This project is currently under development and will continue to receive new geometry formulas and features in future updates.
+Currently under active development, the calculator includes geometry category selection, shape-specific menus, strict input validation, and a structured calculation flow. 
 
-## Getting Started
+## ✨ Key Features
+
+* **🎨 Colored CLI Interface:** Vibrant terminal output for better readability using ANSI escape codes.
+* **🧭 Intuitive Navigation:** Menu-driven system for selecting geometry categories and specific shapes.
+* **🛡️ Robust Input Validation:** Prevents crashes and infinite loops by detecting invalid user inputs using `cin.fail()`.
+* **🧮 Calculation Flow:** Structured pathways for specific calculations (e.g., dedicated Square calculation menu).
+
+## 📐 Supported Geometry Options
+
+### 📏 Plane Geometry (2D)
+* Square
+* Rectangle
+* Kite
+* Rhombus
+* Triangle
+* Circle
+* Parallelogram
+* Trapezoid
+
+### 🧊 Solid Geometry (3D)
+* Cube
+* Cuboid
+* Square Pyramid
+* Triangular Prism
+* Triangular Pyramid
+* Cylinder
+* Cone
+* Sphere
+
+## 🚀 Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine.
 
 ### Dependencies
+* **OS:** Windows
+* **Compiler:** `g++` (via MinGW)
+* **Editor:** VS Code (recommended)
+* **Environment:** A terminal that supports ANSI color codes (e.g., Windows Terminal, VS Code integrated terminal)
 
-- Windows
-- g++
-- MinGW
-- VS Code
-- Terminal that supports ANSI color codes
+### Installation
 
-### Installing
+1. Clone the repository:
+    
+        git clone [your_repository_link]
 
-1. Clone or download this repository
-2. Open the project folder in VS Code
-3. Make sure MinGW and g++ are installed properly
+2. Open the project folder in VS Code.
+3. Ensure MinGW and `g++` are properly installed and added to your system's PATH variables.
 
-### Executing Program
+### Execution
 
-Compile the program using:
+Compile the program using `g++`:
 
-```bash
-g++ script.cpp -o geometry-calculator
-```
+    g++ script.cpp -o geometry-calculator
 
-Run the program using:
+Run the compiled executable:
 
-```bash
-geometry-calculator
-```
+    geometry-calculator
 
-## Current Features
+## 🚧 Project Status & Roadmap
 
-- Colored CLI interface
-- Geometry category selection menu
-- Plane geometry selection menu
-- Solid geometry selection menu
-- Input validation system
-- Invalid input detection using `cin.fail()`
-- Calculation selection flow
-- Square calculation menu
-- Structured CLI navigation system
+**Status:** Under Development 🏗️
 
-## Geometry Options
-
-### Plane Geometry
-
-- Square
-- Rectangle
-- Kite
-- Rhombus
-- Triangle
-- Circle
-- Parallelogram
-- Trapezoid
-
-### Solid Geometry
-
-- Cube
-- Cuboid
-- Square Pyramid
-- Triangular Prism
-- Triangular Pyramid
-- Cylinder
-- Cone
-- Sphere
-
-## Project Status
-
-This project is currently under development.
-
-More geometry calculations such as area, perimeter, surface area, and volume will be added gradually in future updates.
+The core menu system and validation architecture are implemented. Future updates will gradually introduce specific formulas and calculation logic for:
+* Area & Perimeter (Plane Geometry)
+* Surface Area & Volume (Solid Geometry)
