@@ -1,6 +1,7 @@
 #include<iostream>
 #include<chrono>
 #include<thread>
+#include<cmath>
 using namespace std;
 using namespace std::chrono;
 using namespace std::this_thread;
@@ -16,7 +17,8 @@ int main (){
     int geometry = 0;
     int shape_plane = 0;
     int shape_solid = 0;
-    double phi = 3.14;
+    int phi_select = 0;
+    double phi = 3.1415926536;
 
     //Geometry Menu
     cout<<"┌───────────────────┐"<<endl;
@@ -1014,4 +1016,122 @@ int main (){
             exit(0);
         }
     }
+
+     //Circle Variabel
+     int circle_calculation = 0;
+     double circle_r;
+
+     //Circle Menu
+    if (shape_plane == 6){
+        cout<<"┌────────────────────┐"<<endl;
+        cout<<"│       Circle       │"<<endl;
+        cout<<"└────────────────────┘\n\n";
+        cout<<hijau<<"1. Area\n2. Perimeter\n";
+        cout<<putih<<"➤ Select a Calculation: ";
+        cin>>circle_calculation;
+        system("cls");
+
+        if (shape_plane == 6 && (circle_calculation < 1 || circle_calculation > 2 || cin.fail())){
+            cout<<"┌───────────────────────────────────┐"<<endl;
+            cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+            cout<<"└───────────────────────────────────┘";
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cin.get();
+            exit(0);
+        }
+
+         //Circle Area
+        if (circle_calculation == 1){
+            cout<<"\t\t┌────────────────────┐"<<endl;
+            cout<<"\t\t│        Area        │"<<endl;
+            cout<<"\t\t└────────────────────┘\n\n";
+            cout<<"➤ Enter the Radius of the Circle: ";
+            cin>>circle_r;
+
+            if (circle_calculation == 1 && cin.fail()){
+                cout<<"┌───────────────────────────────────┐"<<endl;
+                cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+                cout<<"└───────────────────────────────────┘";
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cin.get();
+                exit(0);
+            }
+
+            cout<<"\n\n"<<hijau<<"1. 3.14\n2. 22/7\n"<<putih<<"➤ Choose Pi Value Type: ";
+            cin>>phi_select;
+
+            if (circle_calculation == 1 && (phi_select < 1 || phi_select > 2 || cin.fail())){
+                cout<<"┌───────────────────────────────────┐"<<endl;
+                cout<<merah<<"│ ⚠ Invalid input, enter one number"<<putih<<" │"<<endl;
+                cout<<"└───────────────────────────────────┘";
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cin.get();
+                exit(0);
+            }
+            
+            if (circle_calculation == 1 && phi_select == 1){
+                phi = 3.1415926536;
+            }
+
+            else if (circle_calculation == 1 && phi_select == 2){
+                phi = 22.0/7.0;
+            }
+
+            system("cls");
+            cout<<"\t\t┌────────────────────┐"<<endl;
+            cout<<"\t\t│        Area        │"<<endl;
+            cout<<"\t\t└────────────────────┘\n\n";
+            cout<<"═══════Input═══════"<<endl;
+            cout<<" r = "<<circle_r<<endl;
+            cout<<" π = "<<phi<<endl;
+            cout<<"══════Process══════"<<endl;
+            cout<<"[░░░░░░░░░░] 0%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[█░░░░░░░░░] 10%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[██░░░░░░░░] 20%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[███░░░░░░░] 30%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[████░░░░░░] 40%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[█████░░░░░] 50%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[██████░░░░] 60%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[███████░░░] 70%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[████████░░] 80%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[█████████░] 90%";
+            sleep_for(milliseconds(500));
+            cout<<"\r";
+            cout<<"[██████████] 100%";
+            sleep_for(milliseconds(500));
+            cout<<"\r                 \r";
+            cout<<"A = πr\u00b2"<<endl;
+            cout<<"A = "<<phi<<" × "<<circle_r<<"\u00b2"<<endl;
+            cout<<"A = "<<phi<<" × "<<circle_r * circle_r<<endl;
+            cout<<"A = "<<phi * (circle_r * circle_r)<<endl<<endl;
+            cout<<"╔═════════════════════╗"<<endl;
+            cout<<"║       Results       ║"<<endl;
+            cout<<"║ P = "<<phi * (circle_r * circle_r)<<"\t      ║"<<endl;
+            cout<<"╚═════════════════════╝"<<endl;
+            exit(0);
+        }
+
+    }
+
 }
